@@ -24,7 +24,7 @@
 
 /* A caixa do menu que aparece embaixo do botão */
 .header {
-    background-color: blue; /* Substitua pelo seu tom de azul */
+    background-color: rgb(94, 5, 5); /* Substitua pelo seu tom de azul */
     width: 100%;
     padding: 20px;
     border-radius: 8px; /* Opcional: deixa os cantos da caixa azul arredondados */
@@ -43,4 +43,9 @@
     color: white; /* Garante que os links fiquem legíveis sobre o azul */
     text-decoration: none;
     font-size: 1.1rem;
+}
+
+
+body {
+    background-color: antiquewhite;
 }
