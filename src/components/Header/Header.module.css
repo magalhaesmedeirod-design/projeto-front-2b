@@ -1,11 +1,35 @@
-.header {
-    background-color: blue;
-}
-
-
 @media screen and (max-width:600px) {
     .header {
         width: 100vw;
         height: 100vh;
     }
+}
+
+
+/* Quando o menu está aberto */
+.header {
+    background-color: blue; /* Substitua pelo seu tom de azul */
+    width: 100%;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Quando o menu está fechado */
+.headerClosed {
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Estilos adicionais para o botão e lista (ajuste como preferir) */
+.menuButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
 }
