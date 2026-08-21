@@ -15,21 +15,24 @@ export default function Header() {
     const isOpen = srcMenu === '/icons/close.svg';
 
     return (
-        /* A classe .header (azul) só será aplicada se isOpen for verdadeiro */
-        <header className={isOpen ? styles.header : styles.headerClosed}>
+        <div className={styles.container}>
+            {/* O botão fica aqui em cima, sempre visível e fora da caixa azul */}
             <button type='button' onClick={toggleMenu} className={styles.menuButton}>
                 <Image src={srcMenu} width={30} height={30} alt='Menu' priority />
             </button>
 
+            {/* O header azul agora só renderiza e envolve a lista quando o menu abre */}
             {isOpen && (
-                <nav className={styles.nav}>
-                    <ul>
-                        <li><Link href={menu[0]}>Home</Link></li>
-                        <li><Link href={menu[1]}>Sobre</Link></li>
-                        <li><Link href={menu[2]}>Contato</Link></li>
-                    </ul>
-                </nav>
+                <header className={styles.header}>
+                    <nav className={styles.nav}>
+                        <ul>
+                            <li><Link href={menu[0]}>Home</Link></li>
+                            <li><Link href={menu[1]}>Sobre</Link></li>
+                            <li><Link href={menu[2]}>Contato</Link></li>
+                        </ul>
+                    </nav>
+                </header>
             )}
-        </header>
+        </div>
     );
 }

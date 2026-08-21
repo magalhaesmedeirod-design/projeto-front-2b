@@ -4,32 +4,42 @@
         height: 100vh;
     }
 }
-
-
-/* Quando o menu está aberto */
-.header {
-    background-color: blue; /* Substitua pelo seu tom de azul */
+/* Container principal invisível para segurar o botão e o menu */
+.container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 1rem;
-    transition: background-color 0.3s ease;
+    padding: 10px;
 }
 
-/* Quando o menu está fechado */
-.headerClosed {
-    background-color: transparent;
-    width: 100%;
-    padding: 1rem;
-}
-
-/* Estilos adicionais para o botão e lista (ajuste como preferir) */
+/* O botão do menu limpo, acima de tudo */
 .menuButton {
     background: none;
     border: none;
     cursor: pointer;
+    align-self: flex-start; /* Alinha o botão à esquerda. Mude para flex-end se preferir na direita */
+    margin-bottom: 10px; /* Cria o espaço entre o botão e a barra azul */
+}
+
+/* A caixa do menu que aparece embaixo do botão */
+.header {
+    background-color: blue; /* Substitua pelo seu tom de azul */
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px; /* Opcional: deixa os cantos da caixa azul arredondados */
 }
 
 .nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os links */
+}
+
+.nav a {
+    color: white; /* Garante que os links fiquem legíveis sobre o azul */
+    text-decoration: none;
+    font-size: 1.1rem;
 }
