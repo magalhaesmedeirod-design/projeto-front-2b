@@ -19,6 +19,7 @@
     cursor: pointer;
     align-self: flex-start; /* Alinha o botão à esquerda. Mude para flex-end se preferir na direita */
     margin-bottom: 10px; /* Cria o espaço entre o botão e a barra azul */
+
 }
 
 /* A caixa do menu que aparece embaixo do botão */
