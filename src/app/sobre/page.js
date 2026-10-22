@@ -4,7 +4,7 @@ export default function Sobre() {
     return (
         <main>
             <h1>Sobre</h1>
-            <p className={styles.paragrafo}>Página sobre</p>
+            <p className={styles.paragrafo}>Págin sobre</p>
         </main>
     )
 }
