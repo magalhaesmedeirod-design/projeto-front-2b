@@ -1,0 +1,28 @@
+'use client';
+import { useEffect } from "react"
+
+export default function Produtos() {
+
+    const [prods, setprods] = useState(null);
+
+useEffect(() => {
+    const fetchprodutos = async () => {
+         const response = await fetch('https://stock.dev.vilhena.ifro.edu.br/api/produtos');
+         console.log(response);
+         if (!response.ok) {
+            throw new Error (`Erro ao buscar produtos ${response.statusText}`);
+         }
+         const data = await response.json();
+         console.log(data)
+    }
+    fetchprodutos;
+}, []);
+
+    return (
+        <div>
+
+        </div>
+    )
+}
+
+
