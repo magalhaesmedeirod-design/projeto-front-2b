@@ -13,7 +13,7 @@ useEffect(() => {
             throw new Error (`Erro ao buscar produtos ${response.statusText}`);
          }
          const data = await response.json();
-         console.log(data)
+         console.log(data) // como salvar data no estado?
     }
     fetchprodutos;
 }, []);
