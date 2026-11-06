@@ -51,6 +51,8 @@ export default function Produtos() {
         return categoria ? categoria.nome : 'Categoria Indisponível';
     }
 
+const filtro =  prods.fiter( p => p.nome.includes(busca))
+
     return (
         <div>
             {
@@ -59,7 +61,10 @@ export default function Produtos() {
                     <div>
 
                         <h2>Lista de produtos</h2>
-                        <input type="text" placeholder="Faça sua busca" value={busca} onChange={(e) => {setBusca(e.target.)} }/>
+                        {filtro && filtro.map(f => (
+                          <P key={f.id}>{f.nome}</P>
+                        ))}
+                        <input type="text" placeholder="Faça sua busca" value={busca} onChange={(e) => {setBusca(e.target.value )}}/>
 
                         <table className={styles.tbl}>
                             <thead>
