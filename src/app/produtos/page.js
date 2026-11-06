@@ -8,6 +8,7 @@ export default function Produtos() {
     const [prods, setProds] = useState(null);
     const [categorias, setCategorias] = useState(null);
     const [prodSelected, setProdSelected] = useState(null);
+    const [busca, setBusca] = useState('');
 
     useEffect(() => {
         const fetchProdutos = async () => {
@@ -57,9 +58,9 @@ export default function Produtos() {
                     <p>Carregando lista de produtos...</p> :
                     <div>
 
-                      
-
                         <h2>Lista de produtos</h2>
+                        <input type="text" placeholder="Faça sua busca" value={busca} onChange={(e) => {setBusca(e.target.)} }/>
+
                         <table className={styles.tbl}>
                             <thead>
                                 <tr>
